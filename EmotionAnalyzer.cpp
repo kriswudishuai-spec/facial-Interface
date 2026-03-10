@@ -116,28 +116,44 @@ void EmotionAnalyzer::processLoop(int cameraIndex)
         }
 
         if (bestFace.area() > 0) {
-            cv::Mat faceROI = gray(bestFace).clone();
-            cv::Mat resized;
-            cv::resize(faceROI, resized, cv::Size(64, 64));
-            resized.convertTo(resized, CV_32F, 1.0 / 255.0);
+            // 1. 给脸部框增加 Padding，向外扩展 15%，包含完整的面部特征
+            int padX = bestFace.width * 0.15;
+            int padY = bestFace.height * 0.15;
+            cv::Rect paddedFace;
+            paddedFace.x = std::max(0, bestFace.x - padX);
+            paddedFace.y = std::max(0, bestFace.y - padY);
+            paddedFace.width = std::min(gray.cols - paddedFace.x, bestFace.width + 2 * padX);
+            paddedFace.height = std::min(gray.rows - paddedFace.y, bestFace.height + 2 * padY);
 
-            // ferplus: N x 1 x 64 x 64
-            cv::Mat blob = cv::dnn::blobFromImage(resized, 1.0, cv::Size(64, 64),
+            // 截取扩充后的人脸区域
+            cv::Mat faceROI = gray(paddedFace).clone();
+
+            // 2. 预处理：直接用 blobFromImage 进行缩放，去除原先缩小255倍的操作
+            // ferplus 期望输入通常为 N x 1 x 64 x 64
+            cv::Mat blob = cv::dnn::blobFromImage(faceROI, 1.0, cv::Size(64, 64),
                                                   cv::Scalar(0), false, false, CV_32F);
 
             net.setInput(blob);
-            cv::Mat prob = net.forward(); // 1x8
+            cv::Mat prob = net.forward(); // 1x8 输出未激活的 Logits
+
+            // 3. 计算 Softmax，将 Logits 转化为真实的 0~1 的置信度概率
+            cv::Mat probExp;
+            cv::exp(prob, probExp);
+            cv::Scalar sumExp = cv::sum(probExp);
+            cv::Mat softmaxProb = probExp / sumExp[0]; // 归一化为概率
 
             cv::Point classIdPoint;
             double maxVal = 0.0;
-            cv::minMaxLoc(prob, nullptr, &maxVal, nullptr, &classIdPoint);
+            cv::minMaxLoc(softmaxProb, nullptr, &maxVal, nullptr, &classIdPoint);
+            
             int idx = classIdPoint.x;
             if (idx < 0) idx = 0;
             if (idx > 7) idx = 7;
 
             bestLabel = QString::fromLatin1(kEmotionLabels[idx]);
-            bestConf = maxVal;
+            bestConf = maxVal; // 此时的置信度是标准概率
 
+            // 在画面上绘制框和文字（依然使用最初的 bestFace 进行绘制，防止视觉上绿框过大）
             cv::rectangle(frame, bestFace, cv::Scalar(0, 255, 0), 2);
             const std::string text = (bestLabel.toStdString() + " " + cv::format("%.2f", bestConf));
             cv::putText(frame, text, cv::Point(bestFace.x, std::max(0, bestFace.y - 8)),
@@ -161,4 +177,3 @@ void EmotionAnalyzer::processLoop(int cameraIndex)
         std::this_thread::sleep_for(std::chrono::milliseconds(5));
     }
 }
-
