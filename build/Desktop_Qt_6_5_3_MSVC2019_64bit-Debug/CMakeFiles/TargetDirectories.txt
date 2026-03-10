@@ -1,0 +1,5 @@
+C:/Users/MK/Documents/facial recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/ClassroomAttentionDemo.dir
+C:/Users/MK/Documents/facial recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/MK/Documents/facial recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/MK/Documents/facial recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/ClassroomAttentionDemo_autogen_timestamp_deps.dir
+C:/Users/MK/Documents/facial recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/CMakeFiles/ClassroomAttentionDemo_autogen.dir

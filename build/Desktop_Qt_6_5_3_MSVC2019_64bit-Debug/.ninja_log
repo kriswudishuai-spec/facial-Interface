@@ -1,0 +1,33 @@
+# ninja log v6
+12	434	7944177004585737	ClassroomAttentionDemo_autogen/timestamp	e467f435376b9fc8
+12	434	7944177004585737	C:/Users/MK/Documents/facial recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/ClassroomAttentionDemo_autogen/mocs_compilation.cpp	e467f435376b9fc8
+12	434	7944177004585737	ClassroomAttentionDemo_autogen/mocs_compilation.cpp	e467f435376b9fc8
+483	2006	7944177005495727	CMakeFiles/ClassroomAttentionDemo.dir/EnvSensor.cpp.obj	e9ddba9afec2e247
+12	434	7944177004585737	C:/Users/MK/Documents/facial recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/ClassroomAttentionDemo_autogen/timestamp	e467f435376b9fc8
+493	1841	7944177005586053	CMakeFiles/ClassroomAttentionDemo.dir/DeviceController.cpp.obj	298c09fc7f560f2
+502	1966	7944177005676041	CMakeFiles/ClassroomAttentionDemo.dir/ControllerLogic.cpp.obj	14f044e870ec26a5
+474	2024	7944177005405721	CMakeFiles/ClassroomAttentionDemo.dir/AttentionAnalyzer.cpp.obj	2641015c147a71dd
+454	2118	7944177005205679	CMakeFiles/ClassroomAttentionDemo.dir/main.cpp.obj	3471234a0e7dac89
+464	2182	7944177005305682	CMakeFiles/ClassroomAttentionDemo.dir/MainWindow.cpp.obj	b2056a7efde7e84b
+440	2246	7944177005065698	CMakeFiles/ClassroomAttentionDemo.dir/ClassroomAttentionDemo_autogen/mocs_compilation.cpp.obj	b204621cb7b3804c
+3075	3504	7944180061214247	ClassroomAttentionDemo_autogen/timestamp	e467f435376b9fc8
+3075	3504	7944180061214247	ClassroomAttentionDemo_autogen/mocs_compilation.cpp	e467f435376b9fc8
+3075	3504	7944180061214247	C:/Users/MK/Documents/facial recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/ClassroomAttentionDemo_autogen/timestamp	e467f435376b9fc8
+3075	3504	7944180061214247	C:/Users/MK/Documents/facial recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/ClassroomAttentionDemo_autogen/mocs_compilation.cpp	e467f435376b9fc8
+3551	4728	7944180062078062	CMakeFiles/ClassroomAttentionDemo.dir/DeviceController.cpp.obj	84196a32d1c21536
+3560	4893	7944180062168031	CMakeFiles/ClassroomAttentionDemo.dir/ControllerLogic.cpp.obj	c6e4bfa8871e799a
+3533	5002	7944180061894508	CMakeFiles/ClassroomAttentionDemo.dir/AttentionAnalyzer.cpp.obj	e1f8ecbc6fd0c71c
+3543	5045	7944180061988060	CMakeFiles/ClassroomAttentionDemo.dir/EnvSensor.cpp.obj	e608d2700433f03
+3512	5110	7944180061684203	CMakeFiles/ClassroomAttentionDemo.dir/main.cpp.obj	ac4d389aa83300df
+3524	5191	7944180061804544	CMakeFiles/ClassroomAttentionDemo.dir/MainWindow.cpp.obj	c3655c99a2caee9
+3506	5229	7944180061614217	CMakeFiles/ClassroomAttentionDemo.dir/ClassroomAttentionDemo_autogen/mocs_compilation.cpp.obj	ef81d74a7c024b7e
+3569	6219	7944180062248027	CMakeFiles/ClassroomAttentionDemo.dir/EmotionAnalyzer.cpp.obj	b6a99182c804512d
+6220	6974	7944180088764151	ClassroomAttentionDemo.exe	4bad94180e74194b
+197	780	7944209415125287	ClassroomAttentionDemo_autogen/timestamp	e467f435376b9fc8
+197	780	7944209415125287	ClassroomAttentionDemo_autogen/mocs_compilation.cpp	e467f435376b9fc8
+197	780	7944209415125287	C:/Users/MK/Documents/facial recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/ClassroomAttentionDemo_autogen/timestamp	e467f435376b9fc8
+197	780	7944209415125287	C:/Users/MK/Documents/facial recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/ClassroomAttentionDemo_autogen/mocs_compilation.cpp	e467f435376b9fc8
+834	2291	7944209416122532	CMakeFiles/ClassroomAttentionDemo.dir/main.cpp.obj	ac4d389aa83300df
+846	2320	7944209416252339	CMakeFiles/ClassroomAttentionDemo.dir/MainWindow.cpp.obj	c3655c99a2caee9
+781	2386	7944209415606388	CMakeFiles/ClassroomAttentionDemo.dir/ClassroomAttentionDemo_autogen/mocs_compilation.cpp.obj	ef81d74a7c024b7e
+2386	3350	7944209431653284	ClassroomAttentionDemo.exe	4bad94180e74194b

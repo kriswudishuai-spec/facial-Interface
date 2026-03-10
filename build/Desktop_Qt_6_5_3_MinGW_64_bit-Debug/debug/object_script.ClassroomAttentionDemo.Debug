@@ -1,0 +1,13 @@
+debug/main.o
+debug/MainWindow.o
+debug/AttentionAnalyzer.o
+debug/EnvSensor.o
+debug/DeviceController.o
+debug/ControllerLogic.o
+debug/EmotionAnalyzer.o
+debug/moc_MainWindow.o
+debug/moc_AttentionAnalyzer.o
+debug/moc_EnvSensor.o
+debug/moc_DeviceController.o
+debug/moc_ControllerLogic.o
+debug/moc_EmotionAnalyzer.o

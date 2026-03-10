@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ClassroomAttentionDemo",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ClassroomAttentionDemo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClassroomAttentionDemo-Debug-786b69343c29b8069e41.json",
+					"name" : "ClassroomAttentionDemo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ClassroomAttentionDemo_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClassroomAttentionDemo_autogen-Debug-9fecd9788ca8589f2fd3.json",
+					"name" : "ClassroomAttentionDemo_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ClassroomAttentionDemo_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ClassroomAttentionDemo_autogen_timestamp_deps-Debug-9b99624a955e3e815a6d.json",
+					"name" : "ClassroomAttentionDemo_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/MK/Documents/facial recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug",
+		"source" : "C:/Users/MK/Documents/facial recognition"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

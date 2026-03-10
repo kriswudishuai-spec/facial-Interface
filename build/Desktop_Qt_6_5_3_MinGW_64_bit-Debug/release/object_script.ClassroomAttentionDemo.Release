@@ -1,0 +1,13 @@
+release/main.o
+release/MainWindow.o
+release/AttentionAnalyzer.o
+release/EnvSensor.o
+release/DeviceController.o
+release/ControllerLogic.o
+release/EmotionAnalyzer.o
+release/moc_MainWindow.o
+release/moc_AttentionAnalyzer.o
+release/moc_EnvSensor.o
+release/moc_DeviceController.o
+release/moc_ControllerLogic.o
+release/moc_EmotionAnalyzer.o
