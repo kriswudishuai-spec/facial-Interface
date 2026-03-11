@@ -60,7 +60,7 @@ void EmotionAnalyzer::processLoop(int cameraIndex)
 
     cv::CascadeClassifier faceCascade;
     if (!faceCascade.load(faceXmlPath.toStdString())) {
-        emit errorOccurred(QString("无法加载人脸检测器：%1").arg(faceXmlPath));
+        emit errorOccurred(QString("Failed to load face detector: %1").arg(faceXmlPath));
         running_ = false;
         return;
     }
@@ -69,19 +69,19 @@ void EmotionAnalyzer::processLoop(int cameraIndex)
     try {
         net = cv::dnn::readNetFromONNX(onnxPath.toStdString());
     } catch (const cv::Exception &e) {
-        emit errorOccurred(QString("无法加载表情 ONNX：%1\n%2").arg(onnxPath, e.what()));
+        emit errorOccurred(QString("Failed to load emotion ONNX model: %1\n%2").arg(onnxPath, e.what()));
         running_ = false;
         return;
     }
     if (net.empty()) {
-        emit errorOccurred(QString("无法加载表情 ONNX：%1").arg(onnxPath));
+        emit errorOccurred(QString("Failed to load emotion ONNX model: %1").arg(onnxPath));
         running_ = false;
         return;
     }
 
     cv::VideoCapture cap(cameraIndex, cv::CAP_ANY);
     if (!cap.isOpened()) {
-        emit errorOccurred(QString("无法打开摄像头 index=%1").arg(cameraIndex));
+        emit errorOccurred(QString("Failed to open camera index=%1").arg(cameraIndex));
         running_ = false;
         return;
     }
