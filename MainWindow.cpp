@@ -433,8 +433,8 @@ void MainWindow::onAttentionUpdated(double score)
 
 void MainWindow::onEnvUpdated(double temperature, double humidity)
 {
-    tempLabel_->setText(tr("温度：%1 °C").arg(QString::number(temperature, 'f', 1)));
-    humLabel_->setText(tr("湿度：%1 %").arg(QString::number(humidity, 'f', 1)));
+    tempLabel_->setText(tr("Temperature：%1 °C").arg(QString::number(temperature, 'f', 1)));
+    humLabel_->setText(tr("Humidity：%1 %").arg(QString::number(humidity, 'f', 1)));
 }
 
 void MainWindow::onLightStateChanged(LightState s)

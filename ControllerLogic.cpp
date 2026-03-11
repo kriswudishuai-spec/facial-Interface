@@ -28,7 +28,20 @@ void ControllerLogic::onAttentionUpdated(double score)
     }
     double avg = sum / history_.size();
 
-    if (avg >= focusThreshold_) {
+    // 对平均值进行平滑处理，限制突变
+    if (smoothedScore_ == 0.0) {
+        smoothedScore_ = avg; // 初始化
+    } else {
+        double delta = avg - smoothedScore_;
+        if (delta > maxStep_)
+            delta = maxStep_;
+        else if (delta < -maxStep_)
+            delta = -maxStep_;
+        smoothedScore_ += delta;
+    }
+
+    // 根据平滑后的值决定设备状态
+    if (smoothedScore_ >= focusThreshold_) {
         deviceCtrl_->setLight(LightState::On);
         deviceCtrl_->setCurtain(CurtainState::Close);
     } else {
