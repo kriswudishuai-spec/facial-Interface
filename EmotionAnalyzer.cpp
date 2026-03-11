@@ -103,19 +103,26 @@ void EmotionAnalyzer::processLoop(int cameraIndex)
         cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
 
         std::vector<cv::Rect> faces;
-        faceCascade.detectMultiScale(gray, faces, 1.2, 5, 0, cv::Size(60, 60));
+        // 更灵敏的参数：尺度变化小、更多邻居、较小最小尺寸
+        faceCascade.detectMultiScale(gray, faces, 1.1, 3, 0, cv::Size(40, 40));
 
         QString bestLabel = "NoFace";
         double bestConf = 0.0;
         cv::Rect bestFace;
 
-        // 多人脸：取面积最大的作为“主脸”
+        // 多人脸：取面积最大的作为“主脸"，同时保持上一帧面部位置以便连续跟踪
+        static cv::Rect lastFace;
         for (const auto &face : faces) {
             if (face.area() > bestFace.area())
                 bestFace = face;
         }
+        if (bestFace.area() == 0 && lastFace.area() > 0) {
+            // 如果本帧没有检测到人脸，使用上一帧的结果
+            bestFace = lastFace;
+        }
 
         if (bestFace.area() > 0) {
+            lastFace = bestFace;
             // 1. 给脸部框增加 Padding，向外扩展 15%，包含完整的面部特征
             int padX = bestFace.width * 0.15;
             int padY = bestFace.height * 0.15;

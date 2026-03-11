@@ -38,6 +38,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(emotionAnalyzer_, &EmotionAnalyzer::emotionUpdated,
             this, &MainWindow::onEmotionUpdated, Qt::QueuedConnection);
+    // 将表情更新传递给注意力分析器以调整分数策略
+    connect(emotionAnalyzer_, &EmotionAnalyzer::emotionUpdated,
+            attentionAnalyzer_, &AttentionAnalyzer::setEmotion, Qt::QueuedConnection);
     connect(emotionAnalyzer_, &EmotionAnalyzer::frameUpdated,
             this, &MainWindow::onFrameUpdated, Qt::QueuedConnection);
     connect(emotionAnalyzer_, &EmotionAnalyzer::errorOccurred,

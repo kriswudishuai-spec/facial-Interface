@@ -1,5 +1,6 @@
 C:/Users/MK/Documents/facial\ recognition/build/Desktop_Qt_6_5_3_MSVC2019_64bit-Debug/ClassroomAttentionDemo_autogen/EWIEGA46WW/moc_AttentionAnalyzer.cpp: C:/Users/MK/Documents/facial\ recognition/AttentionAnalyzer.h \
   D:/QT/6.5.3/msvc2019_64/include/QtCore/QObject \
+  D:/QT/6.5.3/msvc2019_64/include/QtCore/QString \
   D:/QT/6.5.3/msvc2019_64/include/QtCore/QTimer \
   D:/QT/6.5.3/msvc2019_64/include/QtCore/q20type_traits.h \
   D:/QT/6.5.3/msvc2019_64/include/QtCore/qalgorithms.h \
